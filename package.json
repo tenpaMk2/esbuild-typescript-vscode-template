@@ -1,0 +1,29 @@
+{
+  "name": "esbuild-typescript-vscode-template",
+  "version": "1.0.0",
+  "description": "🔰 The esbuild &amp; TypeScript template for debugging by VSCode 🔰",
+  "main": "dist/index.cjs",
+  "scripts": {
+    "build": "npx esbuild --bundle --platform=node --minify --format=cjs --out-extension:.js=.cjs src/index.mts --outdir=dist",
+    "build-esm": "npx esbuild --bundle --minify --format=esm --out-extension:.js=.mjs src/index.mts --outdir=dist",
+    "build-debug": "npx esbuild --bundle --platform=node --sourcemap --keep-names --format=cjs --out-extension:.js=.cjs src/index.mts --outdir=dist",
+    "watch": "npx esbuild --bundle --platform=node --sourcemap --keep-names --watch --format=cjs --out-extension:.js=.cjs src/index.mts --outdir=dist",
+    "exe": "node dist/index.cjs"
+  },
+  "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tenpaMk2/esbuild-typescript-vscode-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tenpaMk2/esbuild-typescript-vscode-template/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "commander": "^12.0.0"
+  }
+}
